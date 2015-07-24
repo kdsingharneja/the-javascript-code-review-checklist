@@ -8,9 +8,43 @@ This will be a work in progress since code review is an art and you just cannot 
 
 ## Plain o' JavaScript
 
-Coming soon...
+- Actively replace Prototype.js code with jQuery, where possible, while working on new features or refactoring.
+
+- Variables are hoisted up in JS. But make sure to declare vars on top of method. This promotes readability
+
+Intead of..
+
+      function() {
+      	console.log(myVar);
+      	var myVar = "Hi";
+      }
+
+Do...
+
+      function() {
+      	var myVar = "Hi";
+      	console.log(myVar);
+      }
 
 ## Angular 1.x
+
+### DOM in directives
+
+Limit DOM manipulation to directives only. Rely on jqLite as much as possible or jQuery if need be.
+
+### $resource
+
+Prefer `$resource` over `$http` when in Angular code.
+
+### $http
+
+Limit use `$http` to writing unit tests or for places where you cannot use `$http`. Avoid direct use of `$http` in Angular controllers. Instead extract the requests to service objects instead. 
+
+Either use
+
+Controller -calling on-> providers using $resources
+Or
+Controllers -calling on-> Services -calling on-> providers using $resource or $http . This is Adapter pattern. 
 
 ### Controller As syntax and Google Closure Compiler
 
