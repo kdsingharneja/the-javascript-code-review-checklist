@@ -16,7 +16,7 @@ Table of Contents
 
 * Actively replace Prototype.js code with jQuery, where possible, while working on new features or refactoring.
 
-8 Variables are hoisted up in JS. But make sure to declare vars on top of method. This promotes readability
+* Even though variables are hoisted up in JS, make sure to declare vars on top of method. This promotes readability
 
 Intead of..
 
@@ -32,11 +32,55 @@ Do...
       	console.log(myVar);
       }
 
+* Make sure strings are localized if the framework is in place
+* Make sure exceptions that are caught and show to the user are also localized and make sense.
+
+### JSDoc
+* For private methods user @private annotations
+
 ## Angular 1x
+
+### General
+* Instantiate $scope variables to null or empty array etc instead of leaving them undefined
+* `$boardcast` only those events on $rootScope that are used systemwide or belong on a system event bus.
+* 
 
 ### DOM in directives
 
 Limit DOM manipulation to directives only. Rely on jqLite as much as possible or jQuery if need be.
+
+### Promise chains
+
+Makre sure _catch_ clause is the the last one.
+
+Instead of:
+```
+    MyResource.query({
+        ....
+      }).$promise.
+        catch(function(error) {
+          showError($i18next('Failed to get part.'), error);
+        }).
+        then(function(response) {
+        ...
+        }).
+```
+
+Do..
+
+```
+    MyResource.query({
+        ....
+      }).$promise.
+        then(function(response) {
+        ...
+        }).
+        catch(function(error) {
+          showError($i18next('Failed to get part.'), error);
+        });
+```
+
+* Depend on `finally` block as much as possble for cleanups.
 
 ### $resource
 
