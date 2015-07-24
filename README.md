@@ -14,6 +14,9 @@ Table of Contents
 
 ## Plain o' JavaScript
 
+* Always use `===` instead of `==`. 
+Best to use [jshint](http://jshint.com/) or other tools to catch this automatically.
+
 * Actively replace Prototype.js code with jQuery, where possible, while working on new features or refactoring.
 
 * Even though variables are hoisted up in JS, make sure to declare vars on top of method. This promotes readability
@@ -33,7 +36,21 @@ Do...
       }
 
 * Make sure strings are localized if the framework is in place
+
 * Make sure exceptions that are caught and show to the user are also localized and make sense.
+
+* When checking on Object properties depend on dot notation. ie.
+Instead of
+
+```
+MyController['myMethod'] !== undefined
+```
+
+do
+
+```
+MyController.myMethod !== undefined
+```
 
 ### JSDoc
 * For private methods user @private annotations
@@ -42,8 +59,8 @@ Do...
 
 ### General
 * Instantiate $scope variables to null or empty array etc instead of leaving them undefined
-* `$boardcast` only those events on $rootScope that are used systemwide or belong on a system event bus.
-* 
+
+* `$boardcast` only those events on $rootScope that are used systemwide or belong on a system event bus. 
 
 ### DOM in directives
 
