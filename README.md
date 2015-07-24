@@ -6,11 +6,17 @@ These are compiled based on my experiences, observations, best practices I have 
 
 This will be a work in progress since code review is an art and you just cannot hava a checklist that is long enough.
 
+Table of Contents
+- [Plain O' JavaScript](#plain-o'-javascript)
+- [Angular 1.x](#angular-1.x)
+- [CoffeeScript](#coffeescript)
+- [Backbone](#backbone)
+
 ## Plain o' JavaScript
 
-- Actively replace Prototype.js code with jQuery, where possible, while working on new features or refactoring.
+* Actively replace Prototype.js code with jQuery, where possible, while working on new features or refactoring.
 
-- Variables are hoisted up in JS. But make sure to declare vars on top of method. This promotes readability
+8 Variables are hoisted up in JS. But make sure to declare vars on top of method. This promotes readability
 
 Intead of..
 
