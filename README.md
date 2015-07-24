@@ -68,7 +68,7 @@ Limit DOM manipulation to directives only. Rely on jqLite as much as possible or
 
 ### Promise chains
 
-Makre sure _catch_ clause is the the last one.
+Make sure _catch_ clause is the the last one.
 
 Instead of:
 ```
