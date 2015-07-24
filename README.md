@@ -8,7 +8,7 @@ This will be a work in progress since code review is an art and you just cannot 
 
 Table of Contents
 - [Plain O' JavaScript](#plain-o'-javascript)
-- [Angular 1.x](#angular-1.x)
+- [Angular 1x](#angular-1x)
 - [CoffeeScript](#coffeescript)
 - [Backbone](#backbone)
 
@@ -32,7 +32,7 @@ Do...
       	console.log(myVar);
       }
 
-## Angular 1.X
+## Angular 1x
 
 ### DOM in directives
 
