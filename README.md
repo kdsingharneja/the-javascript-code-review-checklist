@@ -22,7 +22,9 @@ This reduces stupid development time regressions and makes JS more strongly type
 
 The pain is shortlived but helps in the future.
 
+REadings...
 http://google.github.io/styleguide/angularjs-google-style.html
+https://github.com/google/closure-compiler/wiki/Using-JSDoc-Annotations-with-Closure-compiler
 
 ### Anonymous functions
 
