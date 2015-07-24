@@ -8,6 +8,8 @@ This will be a work in progress since code review is an art and you just cannot 
 
 ## Plain o' JavaScript
 
+Coming soon...
+
 ## Angular 1.x
 
 ### Controller As syntax and Google Closure Compiler
@@ -44,3 +46,5 @@ i.e No need for these anonymous wrappers when you are putting private functions 
 
 
 ## Backbone
+
+Coming soon..
