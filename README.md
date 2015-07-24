@@ -32,7 +32,7 @@ Do...
       	console.log(myVar);
       }
 
-## Angular 1.x
+## Angular 1.X
 
 ### DOM in directives
 
