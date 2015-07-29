@@ -68,6 +68,8 @@ Limit DOM manipulation to directives only. Rely on jqLite as much as possible or
 
 ### Promise chains
 
+* Prefer promise syntax rather than callback syntax. i.e Instead of passing error handler as the second argument in the $q or a resource call, prefer chaining successes in `then`s followed by `catch` and the finally clause in the last for cleanup etc.
+
 Make sure _catch_ clause is the the last one.
 
 Instead of:
@@ -94,8 +96,11 @@ Do..
         }).
         catch(function(error) {
           showError($i18next('Failed to get part.'), error);
-        });
+        }).
+        finally(...) ;
 ```
+
+Also notice the punctuations at the start and end of your then and catches. This helps readability.
 
 * Depend on `finally` block as much as possble for cleanups.
 
