@@ -154,6 +154,21 @@ Do
 
 i.e No need for these anonymous wrappers when you are putting private functions into 
 
+## Digest cycles
+Instead of this anti pattern.
+```js
+if(!$scope.$$phase) {
+  //$digest or $apply
+}
+```
+
+Do..
+```js
+$timeout(function() {
+  // anything you want can go here and will safely be run on the next digest.
+})
+```
+
 ## CoffeeScript
 
 * Avoid conditional modifiers (lines that end with conditionals).
