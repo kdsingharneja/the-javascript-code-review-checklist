@@ -52,6 +52,30 @@ do
 MyController.myMethod !== undefined
 ```
 
+* Prefer initial assignments to 'undefined' instead of 'null'. Then the following checks become useful
+
+```
+var myFlag = undefined;
+...
+if (myFlag) {
+..
+}
+```
+
+* Prefer (not not) operator instead of checking for undefined. Then you don't have to do direct comparision
+
+Instead of
+
+```
+return myFlag !== undefined
+```
+
+do
+
+```
+return !!myFlag
+```
+
 ### JSDoc
 * For private methods user @private annotations
 
