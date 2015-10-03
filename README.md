@@ -86,6 +86,8 @@ i.e avoid...
 if (check1 && check2 && check3) ...
 ```
 
+* Avoid large anonymous functions. Instead create a private function and use that.
+
 ### JSDoc
 * For private methods user @private annotations
 
