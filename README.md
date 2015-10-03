@@ -76,8 +76,20 @@ do
 return !!myFlag
 ```
 
+* Prefer (not not) operator instead of checking for undefined. Then you don't have to do direct comparision
+
+* To use JSDoc annotations to enfore type safety and method contract instead of doing a lot of check in the code.
+
+i.e avoid...
+
+```
+if (check1 && check2 && check3) ...
+```
+
 ### JSDoc
 * For private methods user @private annotations
+
+* If you are using annotations, best to run it through Google Closure Compiler. That will make sure if you are any unsupported annotations but virtue of typos etc.
 
 ## Angular 1x
 
