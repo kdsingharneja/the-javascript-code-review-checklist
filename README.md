@@ -10,6 +10,7 @@ Table of Contents
 - [Plain O' JavaScript](#plain-o'-javascript)
 - [Angular 1x](#angular-1x)
 - [CoffeeScript](#coffeescript)
+- [JQuery](#jquery)
 - [Backbone](#backbone)
 
 ## Plain o' JavaScript
@@ -142,9 +143,30 @@ Also notice the punctuations at the start and end of your then and catches. This
 
 * Depend on `finally` block as much as possble for cleanups.
 
+* Return promises and not deferred
+
+Instead of... 
+
+```
+  function resolveQuery(...) {
+      var deferred = $q.defer();
+      ...
+      return deferred;
+  }
+```
+Do..
+
+```
+  function resolveQuery(...) {
+      var deferred = $q.defer();
+      ...
+      return {$promise: deferred.promise};
+  }
+```  
+
 ### $resource
 
-Prefer `$resource` over `$http` when in Angular code.
+Prefer `$resource` over `$http`
 
 ### $http
 
@@ -237,6 +259,19 @@ $http.get("/api/route", params).
 * Prefer `!` over `not`.
 * Prefer `@` over `this` for referencing instance properties.
 * Prefer double quotes.
+
+## JQuery
+
+* Simplify selectors
+Instead of ..
+```
+$("#topContainer).find(".childA .childB").doSomething();
+```
+
+Do...
+```
+$("#topContainer .childA .childB").doSomething();
+```
 
 ## Backbone
 
